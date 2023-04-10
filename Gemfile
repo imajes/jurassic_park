@@ -48,8 +48,8 @@ gem "sqlite3" # for this test, though normally, PG
 gem 'oj'
 
 ## UI, COMPONENTS
-gem 'view_component'
-gem 'will_paginate'
+# gem 'view_component'
+# gem 'will_paginate'
 
 # UI, RENDERING
 # gem 'humanize'
