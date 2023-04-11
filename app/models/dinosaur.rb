@@ -7,10 +7,13 @@ class Dinosaur < ApplicationRecord
   enum :type, %i(carnivore herbivore)
   enum :gender, %i(male female), default: :female # males cannot exist in the park unless we make it
 
+  self.inheritance_column = :other_type
+
+  belongs_to :paddock, inverse_of: :dinosaurs
 
   before_create :set_type
 
-
+  validates :name, presence: true, uniqueness: true
 
   private
 

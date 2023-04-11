@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :isla_nublar do
+  factory :isla_nublar, class: "Park" do
     name { "Jurassic Park" }
     host_country { "Costa Rica" }
     lat { 9.803167 }
@@ -9,7 +9,7 @@ FactoryBot.define do
     launched_at { Date.parse("1983-8-11") }
   end
 
-  factory :isla_sorna do
+  factory :isla_sorna, class: "Park" do
     name { "Site B" }
     host_country { "Costa Rica" }
     lat { 9.644369 }

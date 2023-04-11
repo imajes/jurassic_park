@@ -89,10 +89,6 @@ group :production do
   gem 'coverband', require: false
 end
 
-## CREATE / MANIPULATE TEST DATA
-gem 'brillo', require: false
-gem 'faker', require: false
-
 group :development do
   gem 'better_errors'
   gem 'bundler-audit', require: false
@@ -136,6 +132,7 @@ group :test do
   gem 'capybara-screenshot'
   gem 'climate_control'
   gem 'database_cleaner'
+  gem 'faker'
   # gem 'fakeredis', require: false
   gem 'formulaic'
   gem 'fuubar'
@@ -151,6 +148,7 @@ group :test do
   # gem 'selenium-webdriver'
   # gem 'simplecov', require: false
   # gem 'simplecov_json_formatter'
+  gem 'shoulda-matchers'
   gem 'terminal-table'
   # gem 'timecop'
   # gem 'vcr'

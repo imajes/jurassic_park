@@ -27,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_06_195656) do
     t.string "name"
     t.integer "park_id"
     t.integer "power"
+    t.integer "capacity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["park_id"], name: "index_paddocks_on_park_id"
@@ -37,7 +38,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_06_195656) do
     t.string "host_country"
     t.string "corporate_entity"
     t.boolean "online", default: false
-    t.datetime "launched_at", precision: nil
+    t.date "launched_at"
     t.float "lat"
     t.float "lng"
     t.datetime "created_at", null: false
