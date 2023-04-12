@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.1"
+ruby '3.2.1'
 
 ## CORE, RAILS
 gem 'bootsnap', require: false
-gem "rails", "~> 7.0.4", ">= 7.0.4.3"
+gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
 
 ## CORE, DATABASE
 # gem 'pg'
-gem "sqlite3" # for this test, though normally, PG
+gem 'sqlite3' # for this test, though normally, PG
 
 ## CORE, REDIS/FAST DB
 # gem "hiredis"
@@ -48,8 +48,8 @@ gem "sqlite3" # for this test, though normally, PG
 gem 'oj'
 
 ## UI, COMPONENTS
-gem 'view_component'
-gem 'will_paginate'
+# gem 'view_component'
+# gem 'will_paginate'
 
 # UI, RENDERING
 # gem 'humanize'
@@ -63,13 +63,13 @@ gem 'will_paginate'
 # gem 'sassc-rails'
 # gem 'sprockets', '3.7.2'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
+gem 'sprockets-rails'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
+gem 'importmap-rails'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
+gem 'turbo-rails'
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails"
+gem 'stimulus-rails'
 
 ## DEPLOYMENT, FRAMING
 gem 'puma'
@@ -88,10 +88,6 @@ group :production do
   ## CODE PATH TRACING
   gem 'coverband', require: false
 end
-
-## CREATE / MANIPULATE TEST DATA
-gem 'brillo', require: false
-gem 'faker', require: false
 
 group :development do
   gem 'better_errors'
@@ -114,7 +110,7 @@ group :development, :test do
   gem 'brakeman', require: false
   gem 'bullet'
   gem 'capybara-select-2'
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'fast_stack'
   gem 'i18n-tasks'
@@ -127,6 +123,7 @@ group :development, :test do
   gem 'pdf-reader'
   gem 'pry-byebug'
   gem 'pry-rails'
+  gem 'smokeclouds-rubocop', path: '../../rubocop/smokeclouds-rubocop'
   gem 'snip_snip'
 end
 
@@ -136,6 +133,7 @@ group :test do
   gem 'capybara-screenshot'
   gem 'climate_control'
   gem 'database_cleaner'
+  gem 'faker'
   # gem 'fakeredis', require: false
   gem 'formulaic'
   gem 'fuubar'
@@ -151,10 +149,10 @@ group :test do
   # gem 'selenium-webdriver'
   # gem 'simplecov', require: false
   # gem 'simplecov_json_formatter'
+  gem 'shoulda-matchers'
   gem 'terminal-table'
   # gem 'timecop'
   # gem 'vcr'
   # gem 'webdrivers'
   gem 'webmock'
 end
-
